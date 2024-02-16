@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import List from './List';
+import { myContext } from '../context/ToDoContent';
 
-const CreateForm = ({addTask}) => {
+const CreateForm = () => {
+  const {addTask}=useContext(myContext);
+
     const [input,setInput]=useState('');
 
     const handleSubmit=()=>{

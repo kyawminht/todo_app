@@ -1,7 +1,11 @@
-import React from "react";
+import React, { createContext, useContext } from "react";
 import List from "./List";
+import { myContext } from '../context/ToDoContent';
 
-const ListGroup = ({ tasks,deleteTask,doneTask}) => {
+const ListGroup = () => {
+  const { tasks,deleteTask,doneTask}=useContext(myContext);
+
+  console.log(tasks)
   return (
     <div>
       <div className="flex items-center justify-between ">
